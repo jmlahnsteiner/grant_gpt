@@ -3,7 +3,7 @@ import os
 import datetime
 import pyshorteners
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
                           MessageHandler, filters)
@@ -11,7 +11,7 @@ from chatgpt_client_mem import (request_chat_ber, request_chat_joy, request_chat
 from claude_client import (request_chat_claude)
 from dalle_client import request_dalle
 
-load_dotenv()
+# load_dotenv()
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -19,7 +19,7 @@ logging.basicConfig(
 )
 
 
-TELEGRAM_API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
+TELEGRAM_API_TOKEN = os.environ["TELEGRAM_API_TOKEN"]
 s = pyshorteners.Shortener()
 
 
